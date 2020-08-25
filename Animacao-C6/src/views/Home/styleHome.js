@@ -14,12 +14,12 @@ const styles = StyleSheet.create({
       alignItems: 'center'
     },
     Carlos: {
-      fontSize: 60,
+      fontSize: 55,
       color: 'white',
       fontFamily: 'Grossa'
     },
     Bank: {
-      fontSize: 60,
+      fontSize: 55,
       fontWeight: "100",
       color: 'white',
       fontFamily: 'Fina'
@@ -35,19 +35,18 @@ const styles = StyleSheet.create({
       justifyContent: "center"
     },
     botaoAbrirConta: {
-      fontSize: 15,
+      fontSize: 14,
       color: 'black',
       backgroundColor: "#ffdb58",
       padding: 15,
       borderRadius: 30,
       width: width-30,
       textAlign: 'center',
-      margin: 10,
       fontFamily: 'Botao',
       fontWeight: "300",
     },
     botaoJaTenhoConta: {
-      fontSize: 15,
+      fontSize: 14,
       color: 'white',
       padding: 15,
       borderRadius: 30,
@@ -56,9 +55,10 @@ const styles = StyleSheet.create({
       borderColor: 'white',
       width: width-30,
       textAlign: 'center',
-      margin: 10,
+      margin: 17,
       marginBottom: 40,
       fontFamily: 'Botao',
+      opacity: 0.7,
     }
   })
 
