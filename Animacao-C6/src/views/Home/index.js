@@ -1,11 +1,22 @@
-import React from 'react';
-import { Text, View, ImageBackground,  TouchableWithoutFeedback, Alert } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, ImageBackground, Animated, TouchableWithoutFeedback, Dimensions } from 'react-native';
 
 import image from '../../assets/bg.png';
 import * as Font from 'expo-font';
 import styles from './styleHome';
 
-export default function App() { 
+export default function App() {
+
+  const [opacity, setOpacity] = useState(new Animated.Value(0));  
+
+  Animated.timing(
+    opacity,
+    {
+      toValue: 1,
+      duration: 1000,
+      useNativeDriver: true
+    }
+  ).start();
 
   const [loaded] = Font.useFonts({
     Grossa: require('../../assets/fontes/Mont-HeavyDEMO.otf'),
@@ -15,17 +26,27 @@ export default function App() {
 
   return (
     <ImageBackground source={image} style={styles.image}>
-      <View style={styles.container}>
-          <View style={styles.CarlosBank}>
+      <Animated.View style={{
+        flex: 1,
+        justifyContent: "flex-start",
+        alignItems: 'center',
+        marginTop: 50,
+      }}>
+          <Animated.View style={styles.CarlosBank}>
             <Text style={styles.Carlos}>
               C93
             </Text>
             <Text style={styles.Bank}>
               Bank
             </Text>
-          </View>
-      </View>
-      <View style={styles.container2}>
+          </Animated.View>
+      </Animated.View>
+      <Animated.View style={{
+        opacity: opacity,
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'center'
+      }}>
         < TouchableWithoutFeedback>
         <Text style={styles.botaoAbrirConta}>
             ABRIR CONTA
@@ -37,7 +58,7 @@ export default function App() {
             JÁ TENHO CONTA
           </Text>
         </ TouchableWithoutFeedback>        
-      </View>
+      </Animated.View>
     </ImageBackground>
   );
 }

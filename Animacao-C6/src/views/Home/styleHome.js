@@ -3,18 +3,12 @@ import {StyleSheet, Dimensions} from 'react-native';
 var width = Dimensions.get('window').width;
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "flex-start",
-      alignItems: 'center',
-      paddingTop: 50,
-    },
     CarlosBank: {
       flexDirection: "row",
       alignItems: 'center'
     },
     Carlos: {
-      fontSize: 55,
+      fontSize: 56,
       color: 'white',
       fontFamily: 'Grossa'
     },
@@ -23,11 +17,6 @@ const styles = StyleSheet.create({
       fontWeight: "100",
       color: 'white',
       fontFamily: 'Fina'
-    },
-    container2: {
-      flex: 1,
-      justifyContent: 'flex-end',
-      alignItems: 'center'
     },
     image: {
       flex: 1,
